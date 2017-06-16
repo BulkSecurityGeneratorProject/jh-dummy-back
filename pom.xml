@@ -10,10 +10,10 @@
     </parent>
 
     <groupId>es.devcircus.jhdummy</groupId>
-    <artifactId>jhdummy</artifactId>
+    <artifactId>jhdummy-back</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Jhdummy</name>
+    <name>Jhdummy-back</name>
 
     <properties>
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx256m</argLine>
