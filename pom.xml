@@ -21,7 +21,6 @@
         <awaitility.version>2.0.0</awaitility.version>
         <commons-io.version>2.5</commons-io.version>
         <commons-lang.version>3.5</commons-lang.version>
-        <docker-maven-plugin.version>0.4.13</docker-maven-plugin.version>
         <!-- Overridden to get metrics-jcache -->
         <dropwizard-metrics.version>3.2.2</dropwizard-metrics.version>
         <frontend-maven-plugin.version>1.4</frontend-maven-plugin.version>
@@ -581,22 +580,6 @@
                     Enable the line below to have remote debugging of your application on port 5005
                     <jvmArguments>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</jvmArguments>
                     -->
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>${docker-maven-plugin.version}</version>
-                <configuration>
-                    <imageName>jhdummy</imageName>
-                    <dockerDirectory>src/main/docker</dockerDirectory>
-                    <resources>
-                        <resource>
-                            <targetPath>/</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}.war</include>
-                        </resource>
-                    </resources>
                 </configuration>
             </plugin>
             <!-- jhipster-needle-maven-add-plugin -->
